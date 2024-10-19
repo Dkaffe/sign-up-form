@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "Norse-Bold";
+    src: url(Norse-Bold.otf);
+}
+
+html, body{
+    margin: 0; padding: 0; width: 100%;
+    height: 100%;
+    overflow-x: hidden !important;
+  }
+
+main {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    width: 100%;
+}
+
+.logo-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 500px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+}
+
+.logo-sidebar p {
+    color: rgba(255, 255, 255, 0.804);
+    margin-top: auto;
+}
+
+.logo-sidebar a {
+    color: rgba(255, 255, 255, 0.804);
+}
+
+.logo img {
+    width: auto;
+    height: 120px;
+}
+
+.logo {
+    margin-top: 200px;
+    height: 150px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.388);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 4.5rem;
+    font-family: "Norse-bold";
+}
+
+.form-area {
+    min-width: calc(100vw - 500px);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form-info {
+    background-color: rgb(244, 244, 244);
+    height: 350px;
+}
+
+.form-info article {
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    height: 350px;
+}
+
+article p {
+    max-width: 55ch;
+}
+
+article p:first-child {
+    margin-top: 140px;
+}
+
+.form-item-container {
+    box-shadow: 15px 15px 15px black;
+    max-width: 100%;
+}
+
+.form-item-container h2 {
+    padding-left: 40px;
+}
+
+.form-items {
+    padding-left: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    max-width: 100%;
+}
+
+.half-one {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.half-one input {
+    width: 240px;
+    height: 25px;
+}
+
+.half-one input:focus, .half-two input:focus {
+    border: 2px solid blue;
+}
+
+.half-one input:focus:invalid, .half-two input:focus:invalid {
+    border: 2px solid rgb(255, 0, 0);
+}
+
+/* Use a pseudo-element for the error message */
+#password:focus:invalid + ::after, 
+#confirm-password:focus:invalid + ::after {
+    content: '* Passwords do not match';
+    color: red;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 100%; /* Position it just below the input */
+    left: 0;
+    padding-top: 35px;
+    width: 200px;
+}
+
+.half-one label {
+    display: block;
+}
+
+.half-two {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.half-two input {
+    width: 240px;
+    height: 25px;
+}
+
+.half-two label {
+    display: block;
+}
+
+.form-footer {
+    height: 100%;
+    background-color: rgb(244, 244, 244);;
+}
+
+.form-footer button {
+    background-color: rgb(74, 142, 87);
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 40px 0 0 40px;
+    width: 200px;
+    padding: 12px;
+}
+
+.form-footer p {
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+.form-footer a {
+    color: rgb(74, 142, 87);
+    text-decoration: none;
+}
+
+label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: rgb(69, 69, 69);
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid rgb(144, 144, 144);
+    outline: none;
+}
+
+@media (width < 450px) {
+    .logo-sidebar {
+        display: none;
+    }
+
+    .form-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-info article {
+        margin-top: 0;
+    }
+
+    article p:first-child {
+        margin-top: 40px;
+    }
+}
+
+@media (width < 768px) {
+    .logo-sidebar {
+        display: none;
+    }
+
+    form {
+        width: 100vw;
+    }
+}
